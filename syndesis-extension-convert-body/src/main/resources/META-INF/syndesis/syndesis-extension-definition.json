@@ -1,0 +1,30 @@
+{
+  "name" : "Convert Body",
+  "description" : "Convert body",
+  "extensionId" : "io.syndesis.extensions:syndesis-extension-convert-body",
+  "version" : "1.0.0",
+  "actions" : [ {
+    "id" : "ConvertBody",
+    "name" : "Convert Body",
+    "description" : "Convert Body to a plain String",
+    "descriptor" : {
+      "inputDataShape" : {
+        "kind" : "none"
+      },
+      "outputDataShape" : {
+        "kind" : "none"
+      },
+      "kind" : "STEP",
+      "entrypoint" : "io.syndesis.extension.convert.body.ConvertBodyAction"
+    },
+    "tags" : [ "body", "extension" ],
+    "actionType" : "step"
+  } ],
+  "dependencies" : [ {
+    "type" : "MAVEN",
+    "id" : "io.syndesis.extension:extension-api:jar:1.10.0"
+  } ],
+  "uses" : 0,
+  "extensionType" : "Steps",
+  "schemaVersion" : "v1"
+}
